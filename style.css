@@ -105,6 +105,16 @@ img{
   text-decoration: none;
   border-radius: 5px;
 }
+/*#down{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}*/
+.imgdown{
+  position: relative;
+  width: 375px;
+  height: 500px;
+}
 
 footer {
   background: #000;
