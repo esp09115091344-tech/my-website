@@ -1,143 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>www.tuckersOfficialFanClub.com</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Celebrity Premium Club</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.4);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ffd700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ffd700;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+    color:#ffd700;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#141414;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 40px rgba(255,215,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card-content p{
+    color:#bbb;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* MEMBERSHIP */
+
+.membership{
+    background:linear-gradient(135deg,#1a1a1a,#111);
+    border-radius:30px;
+    padding:60px;
+    text-align:center;
+}
+
+.price{
+    font-size:70px;
+    color:#ffd700;
+    margin:20px 0;
+}
+
+/* GIVEAWAY */
+
+.giveaway-box{
+    background:url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    border-radius:25px;
+    padding:100px 40px;
+    position:relative;
+    overflow:hidden;
+}
+
+.giveaway-box::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+}
+
+.giveaway-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.giveaway-content h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.giveaway-content p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px;
+    text-align:center;
+    background:#050505;
+    color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:45px;
+}
+
+.section-title{
+    font-size:35px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+</style>
 </head>
+
 <body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">LUKAS NELSON</div>
+
+    <ul>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#meet">Meet & Greet</a></li>
+        <li><a href="#calls">Video Calls</a></li>
+        <li><a href="#giveaway">Giveaway</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-content">
+    <h1>Exclusive Celebrity Experience</h1>
+
+    <p>
+        Join the most premium celebrity fan platform with exclusive access
+        to meet & greets, private video calls, giveaways, and VIP experiences.
+    </p>
+
+    <a href="#membership" class="btn">Become a VIP Member</a>
+</div>
+
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership">
+
+<h2 class="section-title">VIP Membership Card</h2>
+
+<div class="membership">
+    <div style="
+background:linear-gradient(135deg,#1a1a1a,#2c2c2c,#111);
+border-radius:25px;
+padding:20px;
+margin-bottom:35px;
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,215,0,0.4);
+box-shadow:0 10px 40px rgba(255,215,0,0.15);
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+">
+
+<div style="
+position:absolute;
+top:-50px;
+right:-50px;
+width:180px;
+height:180px;
+background:rgba(255,215,0,0.08);
+border-radius:50%;
+"></div>
+
+<h2 style="
+font-size:30px;
+color:#ffd700;
+margin-bottom:10px;
+letter-spacing:2px;
+">
+VIP GOLD MEMBER
+</h2>
+
+<p style="
+color:#bbb;
+margin-bottom:30px;
+font-size:15px;
+">
+Exclusive Celebrity Access Card
+</p>
+
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+">
+
+<div>
+<p style="color:#777;font-size:13px;">MEMBER STATUS</p>
+<h3 style="color:white;">PREMIUM ACCESS</h3>
+</div>
+
+<div>
+<p style="color:#777;font-size:13px;">VALID</p>
+<h3 style="color:white;">2026 - 2030</h3>
+</div>
+
+</div>
+
+<div style="
+margin-top:40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+">
+
+<h1 style="
+font-size:25px;
+letter-spacing:4px;
+color:white;
+">
+★★★★★
+</h1>
+
+
+</div>
+
+</div>
+
+    <h2>Premium Gold Access</h2>
+
+    <div class="price">$500</div>
+
+    <p style="max-width:700px; margin:auto; color:#bbb; line-height:1.8;">
+        Unlock exclusive content, celebrity livestreams, private voice calls,
+        video calls, giveaways, backstage access, and premium member-only events.
+    </p>
+
+    <br>
+
+   <button class="btn"
+onclick="window.location.href='https://t.me/Emmanuelsam00001'">
+Purchase Membership
+</button>
+
+</div>
+
+</section>
+
+<!-- MEET & GREET -->
+<section id="meet">
+
+<h2 class="section-title">Meet & Greet</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+    <h3>Private Events</h3>
+    <p>
+        Schedule exclusive VIP meet and greet events with your favorite celebrity.
+    </p>
+
+<button class="btn"
+onclick="window.location.href='https://t.me/Emmanuelsam00001'">
+Book Now
+</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+    <h3>Backstage Access</h3>
+    <p>
+        Get invited to exclusive celebrity backstage experiences and private lounges.
+    </p>
+
+   <button class="btn"
+onclick="window.location.href='https://t.me/Emmanuelsam00001'">
+Reserve Spot
+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VIDEO & VOICE CALLS -->
+<section id="calls">
+
+<h2 class="section-title">Private Calls</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+    <h3>Video Calls</h3>
+
+    <p>
+        Enjoy one-on-one private video sessions with your celebrity.
+    </p>
+
+    <button class="btn"
+onclick="window.location.href='https://t.me/Emmanuelsam00001'">
+Schedule Video Call
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+    <h3>Voice Calls</h3>
+
+    <p>
+        Speak directly through premium private voice call experiences.
+    </p>
+
+    <button class="btn"
+onclick="window.location.href='https://t.me/CelebrityManagement'">
+Book Voice Call
+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GIVEAWAY -->
+<section id="giveaway">
+
+<div class="giveaway-box">
+
+<div class="giveaway-content">
+
+<h2 style="font-size: 40px">Luxury Giveaways</h2>
+
+<p>
+Win signed merchandise, luxury gifts, backstage tickets,
+exclusive trips, and premium celebrity experiences every month.
+</p>
+
+<button class="btn"
+onclick="window.location.href='https://t.me/Emmanuelsam00001'">
+Join Giveaway
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
 <section>
-  <header class="navbar">
-  <img class="logo" src="logo.png"></img>
-  <h2 class="nam">KING GEORGE</h2>
-  <nav class="nav">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services" class="se">Services</a></li>
-  </nav>
-</header>
-</section><br></br><br></br>
 
-<section id="home" class="hero">
-  <h2>Connect With Me Personally</h2>
-  <p>Exclusive access for real fans only</p>
-  <div class="buttons">
-    <a href="#services" class="btn">Join Membership</a>
-  </div>
+<h2 class="section-title">Celebrity Gallery</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/image1.png">
+</div>
+
+<div class="card">
+<img src="images/image2.png">
+</div>
+
+<div class="card">
+<img src="images/image3.png" style="width: cover">
+</div>
+
+</div>
+
 </section>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    I’m an international musician passionate about music and my fans.
-    This platform allows you to connect with me directly.
-  </p>
-</section>
-
-<section>
-  <img class="about_img" src="aut2.jpg"></img>
-</section>
-
-<section id="services" class="section cards">
-  <h2>Fan Services</h2>
-
-  <div class="card">
-    <h3>🎟 Membership Card $500</h3>
-    <p>Exclusive access, updates & fan privileges.</p>
-    <a href="https://t.me/TUCKA00001"><button>Buy now</button></a>
-  </div>
-
-  <div class="card">
-    <h3>📞 Video / Voice Call $200</h3>
-    <p>Schedule a personal call with me.</p>
-      <a href="https://t.me/TUCKA00001"><button>Schedule</button></a>
-  </div>
-
-  <div class="card">
-    <h3>👕 Autographed T-Shirt $500</h3>
-    <p>Signed personally with your name.</p>
-      <a href="https://t.me/TUCKA00001"><button>Order</button></a>
-  </div>
-  
-  <div class="card">
-    <h3>Meet And Greet $5000</h3>
-    <p>You get to meet me in person.</p>
-    <a href="https://t.me/TUCKA00001"><button>Order</button></a>
-  </div>
-  <section class=give>
-    <h1>🔥 Mega Giveaway 🔥</h1>
-    <p>ACTIVE ONLY ON FRIDAYS, TEUSDAYS BY 12AM</p>
-    <p> FIRST FOUR FANS TO CLAIM 1</p>
-    <h2> FOR THIS WEEK GIVEAWAY</h2>
-
-    <div class="items">
-        <div class="item">
-            <img src="watch2.png">
-        </div><br><br>
-        
-        <div>
-          <button onclick="enterGiveaway()">Claim</button>
-        </div><br><br>
-
-        <div class="item">
-            <img src="gift2.png">
-        </div><br><br>
-        
-        <div>
-          <button onclick="enterGiveaway()">Claim</button>
-        </div><br><br>
-
-        <div class="item">
-            <img src="watch.png">
-        </div><br><br>
-        
-        <div>
-          <button onclick="enterGiveaway()">Claim</button>
-        </div><br><br>
-         
-                <div class="item">
-                  <img src="apple.png">
-                </div>
-    </div>
-    
-    <div>
-      <button onclick="enterGiveaway()">Claim</button>
-    </div><br><br>
-
-    <h1>HURRY UP AND GET YOURS</h1>
-
-    <div class="form-section">
-        <h2>Enter Giveaway</h2>
-      <form id=myForm>  
-         <input type="text" id="name" placeholder="Your Name"><br><br>
-        <input type="number" id="number" placeholder="Your ID Number" required><br><br>
-         <button id="enterBtn" class="butt">Enter Now</button>
-        <p id="message"></p>
-        </div>
-      </form>
-  </section>
-  
-  
-  <h2>FOR ONLY TRUE FANS</h2>
-</section>
-
-<section>
-  <img class="about_img" src="aut.jpg"></img>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Chat directly with my team on Telegram</p>
-  <a class="telegram-btn" href="https://t.me/TUCKA00001" target="_blank">
-    Contact on Telegram
-  </a>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 King George. All Rights Reserved.</p>
+
+© 2026 LUKAS NELSON Premium Club. All Rights Reserved.
+
 </footer>
 
-<script src="Give.js"></script>
 </body>
 </html>
